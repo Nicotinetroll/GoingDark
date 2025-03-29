@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86d58ff9-3722-4cdd-94a4-8dd2b34a9d53" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GoingDarkGit/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoingDarkGit/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Common/Scriptables/Abilities/Active Abilities/Wooden Wand Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Scriptables/Abilities/Active Abilities/Wooden Wand Data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Common/Scripts/Abilities/Behaviors/Active Abilities/Wand/WandProjectileBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Scripts/Abilities/Behaviors/Active Abilities/Wand/WandProjectileBehavior.cs" afterDir="false" />
-    </list>
+    <list default="true" id="86d58ff9-3722-4cdd-94a4-8dd2b34a9d53" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
