@@ -79,8 +79,6 @@ public class WandProjectileBehavior : SimplePlayerProjectileBehavior
             float finalMultiplier = baseMultiplier * Mathf.Pow(damageFalloffPerBounce, bouncesDone);
             float finalDamage = PlayerBehavior.Player.Damage * finalMultiplier;
 
-            Debug.Log($"[Wand] Hit {enemy.name} | Base: {PlayerBehavior.Player.Damage}, Multiplier: {finalMultiplier}, Final: {finalDamage}, BouncesDone: {bouncesDone}");
-
             enemy.TakeDamage(finalDamage);
         }
 
