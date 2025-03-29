@@ -25,7 +25,7 @@ MonoBehaviour:
   levels:
   - abilityCooldown: 1
     projectileSpeed: 5
-    damage: 10
+    damage: 5
     projectileSize: 1
     projectileLifetime: 5
     bounceCount: 1
