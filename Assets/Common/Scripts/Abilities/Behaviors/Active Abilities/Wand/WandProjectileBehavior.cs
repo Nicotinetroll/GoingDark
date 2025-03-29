@@ -6,25 +6,40 @@ public class WandProjectileBehavior : SimplePlayerProjectileBehavior
 {
     private int remainingBounces;
     private float bounceRadius;
+    private int bouncesDone = 0;
+    private float baseMultiplier;
     private List<GameObject> alreadyHit = new List<GameObject>();
 
-    public void InitBounce(Vector2 position, Vector2 direction, float speed, float lifeTime, float damage, int? bounceCount, float radius)
+    private const float damageFalloffPerBounce = 0.8f;
+
+    public void InitBounce(
+        Vector2 position,
+        Vector2 direction,
+        float speed,
+        float lifeTime,
+        float damageMultiplier,
+        int? bounceCount,
+        float radius
+    )
     {
         transform.position = position;
         transform.localScale = Vector3.one * PlayerBehavior.Player.SizeMultiplier;
 
-        this.direction = direction;
+        this.direction = direction.normalized;
         this.Speed = speed;
         this.LifeTime = lifeTime;
+        this.bounceRadius = radius;
 
         if (bounceCount.HasValue)
+        {
             this.remainingBounces = bounceCount.Value;
+            this.bouncesDone = 0;
+            this.baseMultiplier = damageMultiplier;
+        }
 
-        this.DamageMultiplier = damage; // This is now treated as the final flat damage value
-        this.bounceRadius = radius;
         this.spawnTime = Time.time;
-        selfDestructOnHit = false;
         alreadyHit.Clear();
+        selfDestructOnHit = false;
 
         if (rotatingPart != null)
             rotatingPart.rotation = Quaternion.FromToRotation(Vector2.up, direction);
@@ -61,41 +76,52 @@ public class WandProjectileBehavior : SimplePlayerProjectileBehavior
 
         if (collision.TryGetComponent(out EnemyBehavior enemy))
         {
-            float actualDamage = DamageMultiplier; // ✅ Scriptable flat damage
-            enemy.TakeDamage(actualDamage);
-            Debug.Log($"[Wand] Hit {enemy.name} for {actualDamage}");
+            float finalMultiplier = baseMultiplier * Mathf.Pow(damageFalloffPerBounce, bouncesDone);
+            float finalDamage = PlayerBehavior.Player.Damage * finalMultiplier;
+
+            Debug.Log($"[Wand] Hit {enemy.name} | Base: {PlayerBehavior.Player.Damage}, Multiplier: {finalMultiplier}, Final: {finalDamage}, BouncesDone: {bouncesDone}");
+
+            enemy.TakeDamage(finalDamage);
         }
 
         if (remainingBounces > 0)
         {
-            remainingBounces--;
-
-            EnemyBehavior nextEnemy = null;
-            float closestDistance = float.MaxValue;
-
-            var allEnemies = StageController.EnemiesSpawner.GetEnemiesInRadius(transform.position, bounceRadius);
-
-            foreach (var candidate in allEnemies)
-            {
-                if (candidate == null || alreadyHit.Contains(candidate.gameObject)) continue;
-
-                float dist = (candidate.Center - (Vector2)transform.position).sqrMagnitude;
-                if (dist < closestDistance)
-                {
-                    closestDistance = dist;
-                    nextEnemy = candidate;
-                }
-            }
-
+            EnemyBehavior nextEnemy = FindNextTarget();
             if (nextEnemy != null)
             {
-                Vector2 bounceDirection = (nextEnemy.Center - (Vector2)transform.position).normalized;
-                InitBounce(transform.position, bounceDirection, Speed, LifeTime, DamageMultiplier, null, bounceRadius);
+                remainingBounces--;
+                bouncesDone++;
+
+                direction = (nextEnemy.Center - (Vector2)transform.position).normalized;
+
+                InitBounce(transform.position, direction, Speed, LifeTime, baseMultiplier, null, bounceRadius);
                 return;
             }
         }
 
         FinishProjectile();
+    }
+
+    private EnemyBehavior FindNextTarget()
+    {
+        float closestDistance = float.MaxValue;
+        EnemyBehavior nextEnemy = null;
+
+        var allEnemies = StageController.EnemiesSpawner.GetEnemiesInRadius(transform.position, bounceRadius);
+
+        foreach (var enemy in allEnemies)
+        {
+            if (enemy == null || alreadyHit.Contains(enemy.gameObject)) continue;
+
+            float dist = (enemy.Center - (Vector2)transform.position).sqrMagnitude;
+            if (dist < closestDistance)
+            {
+                closestDistance = dist;
+                nextEnemy = enemy;
+            }
+        }
+
+        return nextEnemy;
     }
 
     private void FinishProjectile()
