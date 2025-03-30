@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 6898436529001473308}
   m_Layer: 7
   m_Name: Enemy Bell
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
