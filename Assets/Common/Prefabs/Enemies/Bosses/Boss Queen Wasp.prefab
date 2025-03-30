@@ -77,8 +77,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  damage: 20
-  hp: 4000
+  damage: 60
+  hp: 1200
   canBeKickedBack: 0
   shouldFadeIn: 1
   rb: {fileID: 5851530160400039736}

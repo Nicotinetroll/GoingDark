@@ -363,9 +363,9 @@ MonoBehaviour:
     icon: {fileID: 21300000, guid: 2e82691c1cd3d4ae9a664b3f844a6395, type: 3}
     enemyDrop:
     - dropType: 1
-      chance: 5
+      chance: 0
     - dropType: 10
-      chance: 0.2
+      chance: 0
     - dropType: 20
       chance: 0
     - dropType: 30
