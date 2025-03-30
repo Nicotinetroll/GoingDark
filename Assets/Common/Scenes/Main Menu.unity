@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -42,8 +42,8 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
-  m_GIWorkflowMode: 1
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -66,9 +66,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -554,12 +551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currenciesManager: {fileID: 1692006227}
-  saveManager: {fileID: 486451744}
   upgradesManager: {fileID: 515345912}
-  vibrationManager: {fileID: 2130119865}
-  audioManager: {fileID: 157599324}
-  audioDatabase: {fileID: 11400000, guid: c70a0a8a3f7be62468eda4dcd0607c9a, type: 2}
-  inputManager: {fileID: 1754295057}
 --- !u!1 &1280856057
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,7 +757,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef3e06aa9434cf247bac9213c50e1bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enabledInputs: -1
   highlightsParent: {fileID: 851393178}
 --- !u!4 &1754295058
 Transform:
@@ -941,7 +932,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3643190279692242219, guid: 7dfbe892154909b41aea43c2840561fd, type: 3}
+    - {fileID: 812940220998637063, guid: 7dfbe892154909b41aea43c2840561fd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dfbe892154909b41aea43c2840561fd, type: 3}
