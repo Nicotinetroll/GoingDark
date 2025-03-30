@@ -70,5 +70,6 @@ namespace OctoberStudio
         ShadeBat = 17,
         ShadeVampire = 18,
         ZombieCop = 19,
+        ZombieRandom = 20,
     }
 }

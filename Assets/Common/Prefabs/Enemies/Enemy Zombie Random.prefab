@@ -133,8 +133,9 @@ GameObject:
   - component: {fileID: 2187802105769665928}
   - component: {fileID: 1443820985215948616}
   - component: {fileID: 3763200623129468141}
+  - component: {fileID: 6994700584066575091}
   m_Layer: 0
-  m_Name: Enemy Zombbie Cop
+  m_Name: Enemy Zombie Random
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,8 +150,8 @@ Transform:
   m_GameObject: {fileID: 1805544724578216417}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.449, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalPosition: {x: 0.12, y: 0.0346, z: 0}
+  m_LocalScale: {x: 0.71664023, y: 0.71664023, z: 0.71664023}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6702504156512222630}
@@ -200,7 +201,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -20
-  m_Sprite: {fileID: -655843436, guid: 285447fc48b7d41dda6cb7596c647009, type: 3}
+  m_Sprite: {fileID: -205820365, guid: 55925a1d51f1d4f489b1f561473f62c2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -233,6 +234,48 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6994700584066575091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805544724578216417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b3079f4217e145e5a83e06a3c42d7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomSprites:
+  - {fileID: -205820365, guid: 55925a1d51f1d4f489b1f561473f62c2, type: 3}
+  - {fileID: 344945995, guid: a0ed8e3650dcc498481f58d7dc97bcf4, type: 3}
+  - {fileID: 2060233076, guid: cb735b1ee1bbc4fb7a41f354d6999e10, type: 3}
+  - {fileID: -630603266, guid: 6fcf273f8f74b49ab9061dd995f9643c, type: 3}
+  - {fileID: 8698999, guid: 7ae1b9485e702473ea69056aadeb9d88, type: 3}
+  - {fileID: 2120903450, guid: 2e94705a3c3b14b3b95fb816b370bdd4, type: 3}
+  - {fileID: 847593839, guid: 157de021fb5a84d2ab9d4074e8b7359d, type: 3}
+  - {fileID: -1205992729, guid: 50625c2476bd84c258734d7b77b9feae, type: 3}
+  - {fileID: -1392375447, guid: 35ccdf10e879448f6956d1478fe91044, type: 3}
+  - {fileID: -383119590, guid: 54d6344ca88b544b698efd77ae80348a, type: 3}
+  - {fileID: -464745927, guid: bc43f9dddfcab45d3b67d14ec2a03a96, type: 3}
+  - {fileID: -78084828, guid: f7033b53dbb5d4d99ac8cbb2979f622c, type: 3}
+  - {fileID: -1910736523, guid: 35f861a227eea4ff3bb33f722a761163, type: 3}
+  - {fileID: 1298124352, guid: 02ecd4a98a3194959b3dd0364879a349, type: 3}
+  randomAnimators:
+  - {fileID: 9100000, guid: bb905efd8a96f4896b7b0fb9ee635f07, type: 2}
+  - {fileID: 9100000, guid: 4787cd3f991034d43a450854255cf184, type: 2}
+  - {fileID: 9100000, guid: ee208b4bde8344b189ca0838c1073351, type: 2}
+  - {fileID: 9100000, guid: 2ea45e429eb9d4090be585760070502d, type: 2}
+  - {fileID: 9100000, guid: 6f4dd06183cc7487f990b9acbbb46204, type: 2}
+  - {fileID: 9100000, guid: 24fca02a24c2f4eab9591705af4ad1b9, type: 2}
+  - {fileID: 9100000, guid: b75d6391afa4843eb944879273220280, type: 2}
+  - {fileID: 9100000, guid: 001ca5da07b964643ada4c0fb7995558, type: 2}
+  - {fileID: 9100000, guid: c9048775d127749b78d068b33ed8baec, type: 2}
+  - {fileID: 9100000, guid: c6616615681f94ca18e03b8be8ae5933, type: 2}
+  - {fileID: 9100000, guid: b0a75fae5def447a4bee7bc2f8b5af78, type: 2}
+  - {fileID: 9100000, guid: ad6b88549c32045a2a921d20ce022f60, type: 2}
+  - {fileID: 9100000, guid: 1468e776bbb534f4f9754074239d66ba, type: 2}
+  - {fileID: 9100000, guid: a3180a90d2a414641b8b050e87da0aff, type: 2}
 --- !u!1001 &3161759803227092937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -249,27 +292,27 @@ PrefabInstance:
     - target: {fileID: 8567192082132290159, guid: bd21be6fc4cedd44e93cefd12da1c8ed,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.50676626
+      value: 0.106071286
       objectReference: {fileID: 0}
     - target: {fileID: 8567192082132290159, guid: bd21be6fc4cedd44e93cefd12da1c8ed,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.27758363
+      value: 0.05810105
       objectReference: {fileID: 0}
     - target: {fileID: 8567192082132290159, guid: bd21be6fc4cedd44e93cefd12da1c8ed,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.50676626
+      value: 0.106071286
       objectReference: {fileID: 0}
     - target: {fileID: 8567192082132290159, guid: bd21be6fc4cedd44e93cefd12da1c8ed,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.14666665
+      value: -0.19814685
       objectReference: {fileID: 0}
     - target: {fileID: 8567192082132290159, guid: bd21be6fc4cedd44e93cefd12da1c8ed,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.7066662
+      value: 0.011721421
       objectReference: {fileID: 0}
     - target: {fileID: 8567192082132290159, guid: bd21be6fc4cedd44e93cefd12da1c8ed,
         type: 3}
