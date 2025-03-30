@@ -12,6 +12,7 @@ namespace OctoberStudio
         Boomerang = 7,
         FlyingDagger = 8,
         SolarMagnifier = 9,
+        GrannysArmpit = 10,
 
         Magnet = 100,
         MoveSpeed = 101,
@@ -36,6 +37,7 @@ namespace OctoberStudio
         Recoiler = 207,
         TwinDagger = 208,
         LunarProjector = 209,
+        TheElderRot = 210,
 
         WoodenWand = 1000,
         SteelSword = 1001,
