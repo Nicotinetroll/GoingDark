@@ -49,3 +49,12 @@ MonoBehaviour:
     startingAbility: 1
     baseHP: 200
     baseDamage: 2
+  - name: GRANNY
+    cost: 0
+    icon: {fileID: 21300000, guid: dd97ad280f1174a469304a8efa3840cf, type: 3}
+    prefab: {fileID: 2921880940271959218, guid: 4b2de28fef5124d70b8cb7bc6a402b09,
+      type: 3}
+    hasStartingAbility: 0
+    startingAbility: 1
+    baseHP: 100
+    baseDamage: 1
