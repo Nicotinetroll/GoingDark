@@ -1235,7 +1235,7 @@ MonoBehaviour:
     dropOverride: []
     disableOffscreenTeleport: 0
   circularSpawn: 0
-  enemiesCount: 8
+  enemiesCount: 9
 --- !u!114 &-7248627832352753297
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1512,7 +1512,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3c1218c80952a14489e47b5be94c184, type: 3}
-  m_Name: Track (Pumpkin)
+  m_Name: Track (ZombieRandom)
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}
@@ -1861,7 +1861,7 @@ MonoBehaviour:
     m_DisplayName: Burst
   m_Markers:
     m_Objects: []
-  enemyType: 0
+  enemyType: 20
 --- !u!114 &-107261137663079435
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2081,11 +2081,11 @@ MonoBehaviour:
   waveOverride:
     useDamageOverride: 0
     damageOverride: 0
-    useHPOverride: 0
-    hpOverride: 0
-    useSpeedOverride: 0
+    useHPOverride: 1
+    hpOverride: 100
+    useSpeedOverride: 1
     speedOverride: 0
-    useDropOverride: 0
+    useDropOverride: 1
     dropOverride: []
     disableOffscreenTeleport: 0
   circularSpawn: 0
@@ -3620,10 +3620,10 @@ MonoBehaviour:
   waveOverride:
     useDamageOverride: 0
     damageOverride: 0
-    useHPOverride: 0
-    hpOverride: 0
-    useSpeedOverride: 0
-    speedOverride: 0
+    useHPOverride: 1
+    hpOverride: 100
+    useSpeedOverride: 1
+    speedOverride: 0.3
     useDropOverride: 0
     dropOverride: []
     disableOffscreenTeleport: 0
@@ -3691,7 +3691,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3c1218c80952a14489e47b5be94c184, type: 3}
-  m_Name: Track (Bug)
+  m_Name: Track (ZombieRandom)
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}
@@ -4088,7 +4088,7 @@ MonoBehaviour:
     m_DisplayName: Continuous
   m_Markers:
     m_Objects: []
-  enemyType: 8
+  enemyType: 20
 --- !u!114 &8653470031898022253
 MonoBehaviour:
   m_ObjectHideFlags: 1
