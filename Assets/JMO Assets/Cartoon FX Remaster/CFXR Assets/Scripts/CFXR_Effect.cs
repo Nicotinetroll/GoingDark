@@ -25,8 +25,20 @@ namespace CartoonFX
 	[DisallowMultipleComponent]
 	public partial class CFXR_Effect : MonoBehaviour
 	{
+		
+		public void Initialize()
+		{
+			var particleSystem = GetComponent<ParticleSystem>();
+			if (particleSystem != null)
+			{
+				particleSystem.Stop();
+				particleSystem.Play();
+			}
+		}
 		// Change this value to easily tune the camera shake strength for all effects
 		const float GLOBAL_CAMERA_SHAKE_MULTIPLIER = 1.0f;
+		
+		
 
 #if UNITY_EDITOR
 		[InitializeOnLoadMethod]
@@ -149,6 +161,8 @@ namespace CartoonFX
 					}
 				}
 			}
+			
+
 
 			#region Animated Light Property Drawer
 #if UNITY_EDITOR
@@ -865,6 +879,8 @@ namespace CartoonFX
 				}
 			}
 		}
+		
+		
 
 		static bool isPrefabSource(GameObject gameObject)
 		{

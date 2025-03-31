@@ -7,6 +7,8 @@ using OctoberStudio.Pool;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
+using CartoonFX;
+
 
 namespace OctoberStudio
 {
@@ -46,6 +48,11 @@ namespace OctoberStudio
         [SerializeField] float hitScaleAmount = 0.2f;
         [SerializeField] Color hitColor = Color.white;
         [SerializeField] GameObject hitParticlePrefab;
+        
+        [Header("Death")]
+        [SerializeField] private string deathFXPoolName = "GhostDeathFX";
+
+
 
 
         public EnemyData Data { get; private set; }
@@ -355,9 +362,27 @@ namespace OctoberStudio
 
             fadeInCoroutine.StopIfExists();
 
-            // Changin properties of a material creates a new instance of a material. 
-            // We cache the material at the start of a game and assign it back when we're done with it
-            // This way the batching optimization is restored
+            // Death FX
+            if (Data != null && !string.IsNullOrEmpty(Data.DeathParticlePoolName) && poolsManager != null)
+            {
+                var fx = poolsManager.GetEntity(Data.DeathParticlePoolName);
+                if (fx != null)
+                {
+                    fx.transform.position = transform.position;
+                    fx.transform.rotation = Quaternion.identity;
+                    fx.SetActive(true);
+
+                    if (fx.TryGetComponent(out ParticleSystem ps))
+                        ps.Play();
+
+                    if (fx.TryGetComponent(out CFXR_Effect effect))
+                        effect.Initialize();
+                }
+                else
+                {
+                    Debug.LogWarning($"[Enemy] No pooled object found for {Data.DeathParticlePoolName}");
+                }
+            }
 
             spriteRenderer.material = effectsMaterial;
 
@@ -367,7 +392,8 @@ namespace OctoberStudio
                     effectsMaterial.SetColor(_Overlay, Color.clear);
                     effectsMaterial.DoColor(_Overlay, dissolveSettings.DissolveColor, dissolveSettings.Duration - 0.1f);
                 });
-            } else
+            }
+            else
             {
                 effectsMaterial.SetColor(_Overlay, Color.clear);
                 effectsMaterial.DoColor(_Overlay, dissolveSettings.DissolveColor, dissolveSettings.Duration);
@@ -389,6 +415,10 @@ namespace OctoberStudio
 
             WaveOverride = null;
         }
+
+
+
+
 
         public void KickBack(Vector3 position)
         {

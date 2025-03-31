@@ -27,6 +27,7 @@ namespace OctoberStudio
     }
 
     [System.Serializable]
+    
     public class EnemyData
     {
         [SerializeField] EnemyType type;
@@ -34,11 +35,18 @@ namespace OctoberStudio
         [SerializeField] Sprite icon;
         [SerializeField] List<EnemyDropData> enemyDrop;
 
+        [Header("Death FX")]
+        [SerializeField] GameObject deathParticlePrefab;
+        [SerializeField] string deathParticlePoolName;
+
         public EnemyType Type => type;
         public GameObject Prefab => prefab;
         public Sprite Icon => icon;
         public List<EnemyDropData> EnemyDrop => enemyDrop;
+        public GameObject DeathParticlePrefab => deathParticlePrefab;
+        public string DeathParticlePoolName => deathParticlePoolName;
     }
+
 
     [System.Serializable]
     public class EnemyDropData

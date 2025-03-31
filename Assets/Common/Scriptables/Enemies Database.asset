@@ -30,6 +30,9 @@ MonoBehaviour:
       chance: 1
     - dropType: 100
       chance: 0
+    deathParticlePrefab: {fileID: 4359775741450278212, guid: 96679bc10afc50845962599d04695343,
+      type: 3}
+    deathParticlePoolName: GhostDeathFX
   - type: 1
     prefab: {fileID: 1090571174421192766, guid: bdb159c5340f537448bf478665384e2d,
       type: 3}
@@ -47,6 +50,8 @@ MonoBehaviour:
       chance: 1
     - dropType: 100
       chance: 0
+    deathParticlePrefab: {fileID: 0}
+    deathParticlePoolName: 
   - type: 8
     prefab: {fileID: 1090571174421192766, guid: 5dc89d49c6842b5409db52d345501d70,
       type: 3}
@@ -64,6 +69,8 @@ MonoBehaviour:
       chance: 1
     - dropType: 100
       chance: 0
+    deathParticlePrefab: {fileID: 0}
+    deathParticlePoolName: 
   - type: 0
     prefab: {fileID: 1090571174421192766, guid: fbbda8dafe08b654f8e239cc4a20dad6,
       type: 3}
@@ -85,6 +92,8 @@ MonoBehaviour:
       chance: 1
     - dropType: 100
       chance: 0
+    deathParticlePrefab: {fileID: 0}
+    deathParticlePoolName: 
   - type: 2
     prefab: {fileID: 1090571174421192766, guid: 616763e865365904f81474b24c7dbd5a,
       type: 3}
@@ -106,6 +115,8 @@ MonoBehaviour:
       chance: 1
     - dropType: 100
       chance: 0
+    deathParticlePrefab: {fileID: 0}
+    deathParticlePoolName: 
   - type: 4
     prefab: {fileID: 1090571174421192766, guid: 448a3acc725a9854388bb61e498acffd,
       type: 3}
@@ -129,6 +140,8 @@ MonoBehaviour:
       chance: 1
     - dropType: 100
       chance: 0
+    deathParticlePrefab: {fileID: 0}
+    deathParticlePoolName: 
   - type: 3
     prefab: {fileID: 1090571174421192766, guid: 933a2aced38cff24b98c4f6bbf425bdc,
       type: 3}
@@ -150,6 +163,8 @@ MonoBehaviour:
       chance: 5
     - dropType: 100
       chance: 0
+    deathParticlePrefab: {fileID: 0}
+    deathParticlePoolName: 
   - type: 9
     prefab: {fileID: 1000559380795741602, guid: 4fd0e1f4242cc534ba52cd31872d072b,
       type: 3}
@@ -169,6 +184,8 @@ MonoBehaviour:
       chance: 1
     - dropType: 100
       chance: 0
+    deathParticlePrefab: {fileID: 0}
+    deathParticlePoolName: 
   - type: 5
     prefab: {fileID: 1090571174421192766, guid: ba471a66ef3b5e84c8dbda0667af2dc3,
       type: 3}
@@ -188,6 +205,8 @@ MonoBehaviour:
       chance: 1
     - dropType: 100
       chance: 0
+    deathParticlePrefab: {fileID: 0}
+    deathParticlePoolName: 
   - type: 11
     prefab: {fileID: 1090571174421192766, guid: 28a727afd8706d44684b3377fb914bf0,
       type: 3}
@@ -207,6 +226,8 @@ MonoBehaviour:
       chance: 1
     - dropType: 100
       chance: 0
+    deathParticlePrefab: {fileID: 0}
+    deathParticlePoolName: 
   - type: 12
     prefab: {fileID: 1090571174421192766, guid: 7297358f854c26540b61d98d1dc9feda,
       type: 3}
@@ -226,6 +247,8 @@ MonoBehaviour:
       chance: 1
     - dropType: 100
       chance: 0
+    deathParticlePrefab: {fileID: 0}
+    deathParticlePoolName: 
   - type: 10
     prefab: {fileID: 1090571174421192766, guid: 2ee190a0483a3014c9fa908f77e80e41,
       type: 3}
@@ -247,6 +270,8 @@ MonoBehaviour:
       chance: 1
     - dropType: 100
       chance: 0
+    deathParticlePrefab: {fileID: 0}
+    deathParticlePoolName: 
   - type: 13
     prefab: {fileID: 1090571174421192766, guid: d61327b5b6eb9684c83daba2169b97cb,
       type: 3}
@@ -266,6 +291,8 @@ MonoBehaviour:
       chance: 1
     - dropType: 100
       chance: 0
+    deathParticlePrefab: {fileID: 0}
+    deathParticlePoolName: 
   - type: 14
     prefab: {fileID: 1090571174421192766, guid: 3b85b112e1154b4469a44f0040a84e7e,
       type: 3}
@@ -287,6 +314,8 @@ MonoBehaviour:
       chance: 1
     - dropType: 100
       chance: 0
+    deathParticlePrefab: {fileID: 0}
+    deathParticlePoolName: 
   - type: 17
     prefab: {fileID: 1090571174421192766, guid: 9e7966bd0b80059438f701d4a2cbdbfa,
       type: 3}
@@ -306,6 +335,8 @@ MonoBehaviour:
       chance: 1
     - dropType: 100
       chance: 0
+    deathParticlePrefab: {fileID: 0}
+    deathParticlePoolName: 
   - type: 16
     prefab: {fileID: 1090571174421192766, guid: f338a2d1e2742e84ba2c9d561d503157,
       type: 3}
@@ -323,6 +354,8 @@ MonoBehaviour:
       chance: 5
     - dropType: 100
       chance: 80
+    deathParticlePrefab: {fileID: 0}
+    deathParticlePoolName: 
   - type: 18
     prefab: {fileID: 1090571174421192766, guid: a0aa1826c7adb0847a0b4e8e7da48151,
       type: 3}
@@ -340,6 +373,8 @@ MonoBehaviour:
       chance: 1
     - dropType: 100
       chance: 0
+    deathParticlePrefab: {fileID: 0}
+    deathParticlePoolName: 
   - type: 15
     prefab: {fileID: 1090571174421192766, guid: 527cb116fb01ba34994bd85d880719fe,
       type: 3}
@@ -357,6 +392,8 @@ MonoBehaviour:
       chance: 5
     - dropType: 100
       chance: 0
+    deathParticlePrefab: {fileID: 0}
+    deathParticlePoolName: 
   - type: 20
     prefab: {fileID: 1090571174421192766, guid: 33ab262f4a3194b048289e5f71162506,
       type: 3}
@@ -376,6 +413,9 @@ MonoBehaviour:
       chance: 0
     - dropType: 0
       chance: 80
+    deathParticlePrefab: {fileID: 4359775741450278212, guid: 96679bc10afc50845962599d04695343,
+      type: 3}
+    deathParticlePoolName: GhostDeathFX
   - type: 21
     prefab: {fileID: 1090571174421192766, guid: c425352b6656c4bfba8f5b69c01f4a5f,
       type: 3}
@@ -395,3 +435,5 @@ MonoBehaviour:
       chance: 0
     - dropType: 0
       chance: 80
+    deathParticlePrefab: {fileID: 0}
+    deathParticlePoolName: 
