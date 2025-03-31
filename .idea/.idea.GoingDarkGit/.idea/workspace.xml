@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="86d58ff9-3722-4cdd-94a4-8dd2b34a9d53" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoingDarkGit/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoingDarkGit/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Common/Scripts/DEBUG/TimelineDebugDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Scripts/DEBUG/TimelineDebugDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Common/Prefabs/UI/Pause Window.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Prefabs/UI/Pause Window.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Common/Prefabs/UI/Upgrades/Settings Window 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Prefabs/UI/Upgrades/Settings Window 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Common/Prefabs/UI/Upgrades/Settings Window.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Prefabs/UI/Upgrades/Settings Window.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Common/Scripts/UI/Windows/PauseWindowBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Scripts/UI/Windows/PauseWindowBehavior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Common/Scripts/UI/Windows/SettingsWindowBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Scripts/UI/Windows/SettingsWindowBehavior.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

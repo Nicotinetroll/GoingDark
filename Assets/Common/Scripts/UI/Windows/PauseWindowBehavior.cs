@@ -22,6 +22,10 @@ namespace OctoberStudio.UI
         [SerializeField] ToggleBehavior soundToggle;
         [SerializeField] ToggleBehavior musicToggle;
         [SerializeField] ToggleBehavior vibrationToggle;
+        [SerializeField] ToggleBehavior debugOverlayToggle;
+
+        [Space]
+        [SerializeField] GameObject debugOverlayTarget;
 
         public event UnityAction OnStartedClosing;
         public event UnityAction OnClosed;
@@ -40,12 +44,23 @@ namespace OctoberStudio.UI
             musicToggle.SetToggle(GameController.AudioManager.MusicVolume != 0);
             vibrationToggle.SetToggle(GameController.VibrationManager.IsVibrationEnabled);
 
-            soundToggle.onChanged += (soundEnabled) => GameController.AudioManager.SoundVolume = soundEnabled ? 1 : 0;
-            musicToggle.onChanged += (musicEnabled) => GameController.AudioManager.MusicVolume = musicEnabled ? 1 : 0;
-            vibrationToggle.onChanged += (vibrationEnabled) => GameController.VibrationManager.IsVibrationEnabled = vibrationEnabled;
+            if (debugOverlayTarget != null)
+            {
+                debugOverlayToggle.SetToggle(debugOverlayTarget.activeSelf);
+                debugOverlayToggle.onChanged += (enabled) =>
+                {
+                    debugOverlayTarget.SetActive(enabled);
+                    Debug.Log($"[DebugToggle] Timeline Debug visibility set to: {enabled}");
+                };
+            }
+            else
+            {
+                Debug.LogWarning("[DebugToggle] No Debug Overlay Target assigned in PauseWindowBehavior.");
+            }
 
             stageSave = GameController.SaveManager.GetSave<StageSave>("Stage");
         }
+
 
         public void Open()
         {

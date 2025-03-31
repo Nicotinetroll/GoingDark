@@ -13,6 +13,10 @@ namespace OctoberStudio.UI
         [SerializeField] ToggleBehavior soundToggle;
         [SerializeField] ToggleBehavior musicToggle;
         [SerializeField] ToggleBehavior vibrationToggle;
+        [SerializeField] ToggleBehavior debugOverlayToggle;
+
+        [Space]
+        [SerializeField] GameObject debugOverlayTarget;
 
         [Space]
         [SerializeField] Button backButton;
@@ -28,10 +32,12 @@ namespace OctoberStudio.UI
             soundToggle.SetToggle(GameController.AudioManager.SoundVolume != 0);
             musicToggle.SetToggle(GameController.AudioManager.MusicVolume != 0);
             vibrationToggle.SetToggle(GameController.VibrationManager.IsVibrationEnabled);
+            debugOverlayToggle.SetToggle(debugOverlayTarget.activeSelf);
 
-            soundToggle.onChanged += (soundEnabled) => GameController.AudioManager.SoundVolume = soundEnabled ? 1 : 0;
-            musicToggle.onChanged += (musicEnabled) => GameController.AudioManager.MusicVolume = musicEnabled ? 1 : 0;
-            vibrationToggle.onChanged += (vibrationEnabled) => GameController.VibrationManager.IsVibrationEnabled = vibrationEnabled;
+            soundToggle.onChanged += (enabled) => GameController.AudioManager.SoundVolume = enabled ? 1 : 0;
+            musicToggle.onChanged += (enabled) => GameController.AudioManager.MusicVolume = enabled ? 1 : 0;
+            vibrationToggle.onChanged += (enabled) => GameController.VibrationManager.IsVibrationEnabled = enabled;
+            debugOverlayToggle.onChanged += (enabled) => debugOverlayTarget.SetActive(enabled);
         }
 
         public void Init(UnityAction onBackButtonClicked)
