@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86d58ff9-3722-4cdd-94a4-8dd2b34a9d53" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoingDarkGit/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoingDarkGit/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Common/Prefabs/Enemies/Enemy Ghost Jar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Prefabs/Enemies/Enemy Ghost Jar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Common/Prefabs/Enemies/Enemy Zombie Random.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Prefabs/Enemies/Enemy Zombie Random.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Common/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Scenes/Main Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Common/Scriptables/Audio Database.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Scriptables/Audio Database.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Common/Scripts/Enemies/EnemiesSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Scripts/Enemies/EnemiesSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Common/Scripts/Enemies/EnemyBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Scripts/Enemies/EnemyBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR Demo Ground URP.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR Demo Ground URP.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Common/Scripts/DEBUG/TimelineDebugDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Scripts/DEBUG/TimelineDebugDisplay.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,19 +29,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "Pooling-VFX-hit-attack",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/6000.0.38f1/Unity.app/Contents/MacOS/Unity" />
