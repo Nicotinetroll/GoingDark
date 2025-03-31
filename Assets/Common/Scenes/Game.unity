@@ -1347,6 +1347,10 @@ MonoBehaviour:
     prefab: {fileID: 2881232349397440291, guid: 97c48ef636fabba40aba2a7d6ebf8203,
       type: 3}
     size: 100
+  - name: GhostDeathFX
+    prefab: {fileID: 4359775741450278212, guid: 96679bc10afc50845962599d04695343,
+      type: 3}
+    size: 5
 --- !u!1 &1846095498
 GameObject:
   m_ObjectHideFlags: 0

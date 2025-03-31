@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86d58ff9-3722-4cdd-94a4-8dd2b34a9d53" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GoingDarkGit/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoingDarkGit/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Common/Scripts/Enemies/EnemiesDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Scripts/Enemies/EnemiesDatabase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Common/Scripts/Enemies/EnemyBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Scripts/Enemies/EnemyBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Scripts/CFXR_Effect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Scripts/CFXR_Effect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Eerie/Variants/CFXR2 Skull Head + Eyes (Fire HDR).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Eerie/Variants/CFXR2 Skull Head + Eyes (Fire HDR).prefab" afterDir="false" />
-    </list>
+    <list default="true" id="86d58ff9-3722-4cdd-94a4-8dd2b34a9d53" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
