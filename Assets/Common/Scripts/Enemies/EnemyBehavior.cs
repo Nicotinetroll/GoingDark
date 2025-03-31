@@ -225,6 +225,8 @@ namespace OctoberStudio
 
         public void TakeDamage(float damage)
         {
+            DamageStatsTracker.AddDamage(damage);
+            
             if (!IsAlive) return;
             if (IsInvulnerable) return;
             
@@ -431,6 +433,11 @@ namespace OctoberStudio
             }
         }
         
+        
+        
+        
+        // POOLING
+        
         public void SetHitParticle(GameObject prefab)
         {
             hitParticlePrefab = prefab;
@@ -442,6 +449,7 @@ namespace OctoberStudio
         }
         
         private PoolsManager poolsManager;
+        
 
 
     }

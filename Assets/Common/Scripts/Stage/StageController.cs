@@ -143,5 +143,11 @@ namespace OctoberStudio
             director.stopped -= TimelineStopped;
         }
         
+        private void Update()
+        {
+            if (Time.timeScale > 0)
+                DamageStatsTracker.Update(Time.deltaTime);
+        }
+        
     }
 }

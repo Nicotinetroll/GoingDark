@@ -57,13 +57,15 @@ public class TimelineDebugDisplay : MonoBehaviour
             float fps = frameCount / timeElapsed;
 
             debugText.text =
-                //$"Timeline: {timelineTime:F2}s\n" +
+                //$"Time: {timelineTime:F2}s\n" +
                 //$"Frame: {timelineFrame}\n" +
                 $"FPS: {fps:F1}\n" +
-                $"Particles: {totalParticles}\n" +
+                //$"Particles: {totalParticles}\n" +
                 $"Hit Particles (Active): {activeHit}\n" +
-                $"Hit Particles (Pooled/Disabled): {disabledHit}\n" +
-                $"Hit Particles (Missing): {unknownHit}";
+                //$"Hit Particles (Pooled/Disabled): {disabledHit}\n" +
+                //$"Hit Particles (Missing): {unknownHit}\n" +
+                $"Total Damage: {DamageStatsTracker.TotalDamage:F0}\n" +
+                $"DPS: {DamageStatsTracker.DPS:F1}";
 
             frameCount = 0;
             timeElapsed = 0;
@@ -71,12 +73,14 @@ public class TimelineDebugDisplay : MonoBehaviour
         else if (!string.IsNullOrEmpty(debugText.text))
         {
             string[] lines = debugText.text.Split('\n');
-            if (lines.Length >= 7)
+            if (lines.Length >= 9)
             {
                 lines[3] = $"Particles: {totalParticles}";
                 lines[4] = $"Hit Particles (Active): {activeHit}";
                 lines[5] = $"Hit Particles (Pooled/Disabled): {disabledHit}";
                 lines[6] = $"Hit Particles (Missing): {unknownHit}";
+                lines[7] = $"Damage: {DamageStatsTracker.TotalDamage:F0}";
+                lines[8] = $"DPS: {DamageStatsTracker.DPS:F1}";
                 debugText.text = string.Join("\n", lines);
             }
         }
