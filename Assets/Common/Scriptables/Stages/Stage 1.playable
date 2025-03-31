@@ -3579,7 +3579,7 @@ MonoBehaviour:
       chance: 90
     disableOffscreenTeleport: 0
   circularSpawn: 0
-  continuousSpawnPerSecond: 0.2
+  continuousSpawnPerSecond: 0.3
 --- !u!114 &8487286461575823994
 MonoBehaviour:
   m_ObjectHideFlags: 1
