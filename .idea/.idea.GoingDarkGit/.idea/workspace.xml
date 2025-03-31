@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86d58ff9-3722-4cdd-94a4-8dd2b34a9d53" name="Changes" comment="" />
+    <list default="true" id="86d58ff9-3722-4cdd-94a4-8dd2b34a9d53" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GoingDarkGit/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoingDarkGit/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Common/Animations/Enemies/enemy_mega_slime_0.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Animations/Enemies/enemy_mega_slime_0.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Common/Scripts/Enemies/EnemiesDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Scripts/Enemies/EnemiesDatabase.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +33,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Wand-Split-Damage&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -91,6 +95,8 @@
       <option name="presentableId" value="Default" />
       <updated>1743269384643</updated>
       <workItem from="1743269385711" duration="1023000" />
+      <workItem from="1743400854608" duration="1184000" />
+      <workItem from="1743427725648" duration="1867000" />
     </task>
     <servers />
   </component>

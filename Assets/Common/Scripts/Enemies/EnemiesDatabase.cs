@@ -71,5 +71,6 @@ namespace OctoberStudio
         ShadeVampire = 18,
         ZombieCop = 19,
         ZombieRandom = 20,
+        GhostJar = 21,
     }
 }
