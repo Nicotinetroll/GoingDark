@@ -87,6 +87,7 @@ MonoBehaviour:
   enemyCollider: {fileID: 1982295306974641257}
   hitScaleAmount: 0.2
   hitColor: {r: 1, g: 1, b: 1, a: 1}
+  hitParticlePrefab: {fileID: 0}
 --- !u!58 &1982295306974641257
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -199,7 +200,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -20
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1412079671, guid: 8469a0df269154227b806d2b4db009d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

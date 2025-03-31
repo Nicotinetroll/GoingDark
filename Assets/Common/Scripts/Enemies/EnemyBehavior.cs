@@ -3,6 +3,7 @@ using OctoberStudio.Enemy;
 using OctoberStudio.Extensions;
 using OctoberStudio.Timeline;
 using System.Collections.Generic;
+using OctoberStudio.Pool;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -44,6 +45,8 @@ namespace OctoberStudio
         [Header("Hit")]
         [SerializeField] float hitScaleAmount = 0.2f;
         [SerializeField] Color hitColor = Color.white;
+        [SerializeField] GameObject hitParticlePrefab;
+
 
         public EnemyData Data { get; private set; }
         public WaveOverride WaveOverride { get; protected set; }
@@ -224,6 +227,38 @@ namespace OctoberStudio
         {
             if (!IsAlive) return;
             if (IsInvulnerable) return;
+            
+            if (hitParticlePrefab != null && poolsManager != null)
+            {
+                GameObject pooled = poolsManager.GetEntity("ParticlePrefab"); // <-- make sure this name matches
+                if (pooled != null)
+                {
+                    Debug.Log("[Particle] Spawned pooled particle");
+
+                    pooled.transform.position = Center;
+                    pooled.transform.rotation = Quaternion.identity;
+                    pooled.SetActive(true);
+
+                    if (pooled.TryGetComponent<ParticleSystem>(out var ps))
+                    {
+                        Debug.Log("[Particle] Found and played particle system");
+                        ps.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+                        ps.Play();
+                    }
+                    else
+                    {
+                        Debug.LogWarning("[Particle] Pooled object has no ParticleSystem");
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning("[Particle] No object found in pool. Check pool name?");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("[Particle] ParticlePrefab or PoolsManager missing on enemy");
+            }
 
             HP -= damage;
 
@@ -395,5 +430,19 @@ namespace OctoberStudio
                 effects.Remove(effect);
             }
         }
+        
+        public void SetHitParticle(GameObject prefab)
+        {
+            hitParticlePrefab = prefab;
+        }
+
+        public void SetPoolsManager(PoolsManager manager)
+        {
+            poolsManager = manager;
+        }
+        
+        private PoolsManager poolsManager;
+
+
     }
 }

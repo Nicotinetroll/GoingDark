@@ -14,6 +14,12 @@ namespace OctoberStudio
     public class EnemiesSpawner : MonoBehaviour
     {
         private List<EnemyBehavior> enemies = new List<EnemyBehavior>();
+        [SerializeField] private GameObject defaultHitParticlePrefab;
+
+        
+        [Header("SatanWagen")]
+        [SerializeField] private PoolsManager poolsManager;
+        [Space]
 
         [SerializeField] EnemiesDatabase database;
         [SerializeField] BossfightDatabase bossfightDatabase;
@@ -186,8 +192,10 @@ namespace OctoberStudio
             var enemy = enemyPools[enemyType].GetEntity();
 
             enemy.SetData(database.GetEnemyData(enemyType));
-
             enemy.transform.position = position;
+            enemy.SetPoolsManager(poolsManager);
+            enemy.SetHitParticle(defaultHitParticlePrefab);
+
 
             enemy.onEnemyDied += OnEnemyDied;
             if (onEnemyDiedCallback != null) enemy.onEnemyDied += onEnemyDiedCallback;
@@ -209,6 +217,9 @@ namespace OctoberStudio
 
                 enemy.SetData(database.GetEnemyData(type));
                 enemy.SetWaveOverride(waveOverride);
+                enemy.SetPoolsManager(poolsManager);
+                enemy.SetHitParticle(defaultHitParticlePrefab);
+
 
                 var triesCount = 0;
                 var maxTriesCount = 10;

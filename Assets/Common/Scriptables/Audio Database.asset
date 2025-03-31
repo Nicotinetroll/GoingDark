@@ -281,6 +281,6 @@ MonoBehaviour:
     name: Music
     cooldown: 0
     audioClip:
-      audioClip: {fileID: 8300000, guid: 629b67973afe85640b8c153ae1502f6c, type: 3}
+      audioClip: {fileID: 8300000, guid: c55f3d3324d3e41efb4a8d0d5cb7d495, type: 3}
       volume: {x: 0.07, y: 0.07}
       pitch: {x: 0.9, y: 0.9}
